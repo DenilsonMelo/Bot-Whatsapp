@@ -15,18 +15,18 @@ class WhatsappBot:
         for grupo in self.grupos_ou_pessoas:
             # Seleciona o grupo
             grupo = self.driver.find_element_by_xpath(f"//span[@title='{grupo}']")
-            time.sleep(3)
+            time.sleep(2)
             grupo.click()
             # Seleciona o campo para enviar mensagem
             chat_box = self.driver.find_element_by_class_name('_1Plpp')
-            time.sleep(3)
+            time.sleep(2)
             chat_box.click()
             chat_box.send_keys(self.mensagem)
             # Seleciona o botão enviar
             botao_enviar = self.driver.find_element_by_xpath("//span[@data-icon='send']")
-            time.sleep(3)
+            time.sleep(2)
             botao_enviar.click()
-            time.sleep(5)
+            time.sleep(1)
 
 bot = WhatsappBot()
 bot.EnviarMensagens()
